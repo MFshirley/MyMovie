@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/hot/hot",
+    "pages/list/list",
+    "pages/me/me",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1e90ff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,24 @@
+<!--pages/home/home.wxml-->
+<view class='hot-card'>
+  <image class='hot-image' src='{{movieList[0].image}}' mode='widthFix'></image>
+  <view class='movie-name' >{{movieList[0].name}}</view>
+</view>
+
+<view class='review-card'>
+  <image class='review-head'></image>
+  <view class='review-item'>
+    <view class='review-username'>Someone</view>
+    <view class='review-content'>send a review</view>
+  </view>
+</view>
+
+<view class="nav-card">
+  <view class='hot-entry' bindtap='onTapHot'>
+    <image class='btn-img' src='/images/image.png'></image>
+    <view class="hot-btn">热门</view>
+  </view>
+  <view class='me-entry' bindtap='onTapMe'>
+    <image class='btn-img' src='/images/image.png'></image>
+    <view class="me-btn">我的</view>
+  </view>
+</view>

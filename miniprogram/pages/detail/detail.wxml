@@ -1,0 +1,19 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail-card'>
+  <image class='movie-image' mode='midthFix' src='/images/bumblebee.jpg'></image>
+  <view class='content-card'>
+    <view class='movie-name'>{{item.name}}</view>
+    <view class='movie-content' maxlength='255'>{{item.detail}}</view>
+  </view>
+
+  <view class='review-card'>
+    <view class='review-btn'>
+      <image class='btn-img' src='/images/image.png'></image>
+      <text class='btn-text'>查看影评</text>
+    </view>
+    <view class='review-btn'>
+      <image class='btn-img' src='/images/image.png'></image>
+      <text class='btn-text'>添加影评</text>
+    </view>
+  </view>
+</view>

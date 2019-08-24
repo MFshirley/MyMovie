@@ -1,0 +1,70 @@
+/* pages/home/home.wxss */
+.hot-image{
+  display: block;
+  margin: 24rpx auto;
+  width: 560rpx;
+  height: 560rpx;
+}
+
+.movie-name{
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 70rpx;
+  opacity: 0.6;
+}
+
+.review-card{
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.review-head{
+  flex-shrink: 0;
+  margin-left: 53rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background: #F5E069;
+  border-radius: 50%;
+}
+
+.review-item{
+  display: flex;
+  align-items: center;
+}
+
+.review-username,
+.review-content{
+  margin-left: 10rpx;
+  opacity: 0.6;
+}
+
+.nav-card {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hot-entry,
+.me-entry{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-img{
+  width: 43rpx;
+  height: 43rpx;
+  padding: 24rpx;
+}
+
+.hot-btn,
+.me-btn{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #34373D;
+}

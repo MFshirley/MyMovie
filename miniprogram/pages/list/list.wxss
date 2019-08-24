@@ -1,0 +1,28 @@
+/* pages/list/list.wxss */
+.movie-card{
+  display: flex;
+  margin: 36rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.08);
+}
+
+.movie-image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.content-card{
+  margin: 36rpx;
+  align-items:center;
+}
+
+.movie-name{
+  font-size: 40rpx;
+  line-height: 64rpx;
+  font-weight: bold;
+}
+
+.movie-type{
+  margin-top: 24rpx;
+  font-size: 36rpx;
+  opacity: 0.8;
+}

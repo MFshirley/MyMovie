@@ -1,0 +1,46 @@
+/* pages/detail/detail.wxss */
+.movie-image{
+  display: block;
+  margin: 20rpx auto;
+  width: 360rpx;
+}
+
+.content-card{
+  margin: 20rpx 48rpx 20rpx 48rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.06);
+}
+
+.movie-name{
+  font-size: 40rpx;
+  line-height: 64rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.review-content{
+  margin-top: 20rpx;
+}
+
+
+.review-card{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.review-btn{
+  display: flex;
+  padding: 8rpx;
+  align-items: center;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(207, 236, 248, 0.06);
+}
+
+.btn-img{ 
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.btn-text{
+  font-size: 36rpx;
+  opacity: 0.8;
+}
