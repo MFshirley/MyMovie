@@ -1,0 +1,48 @@
+/* pages/add-review/add-review.wxss */
+.child-bg{
+  position: absolute;
+  left: 36rpx;
+  right: 36rpx;
+  top: 100rpx;
+  bottom: 136rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.06);
+  border-radius: 10rpx;
+}
+
+.review-content {
+  margin: 60rpx 72rpx 0;
+  padding-bottom: 26rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 10rpx;
+}
+
+.review-input {
+  width: 100%;
+  height: 200rpx;
+  padding: 29rpx 34rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.review-placeholder {
+  color: rgba(29, 29, 38, 0.4);
+}
+
+.btn-finish{
+  background: #00BD00;
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 100rpx; 
+}
+
+.btn-finish.disable {
+  color: rgba(52, 55, 61, 0.5);
+}

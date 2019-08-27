@@ -1,4 +1,6 @@
 // pages/me/me.js
+const util = require('../../utils/util')
+
 Page({
 
   /**
@@ -9,9 +11,14 @@ Page({
   },
 
   onTapLogin(event) {
-
     this.setData({
       userInfo: event.detail.userInfo
+    })
+  },
+
+  onBackHome(){
+    wx.navigateTo({
+      url: '/pages/home/home',
     })
   },
 
@@ -33,7 +40,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    util.getUserInfo().then(userInfo => {
+      this.setData({
+        userInfo
+      })
+    }).catch(err => {
+      console.log('Not Authenticated yet')
+    })
   },
 
   /**

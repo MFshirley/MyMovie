@@ -1,0 +1,21 @@
+<!--pages/review/review.wxml-->
+<view class='detail-card'>
+  <image class='movie-image' mode='midthFix' src='/images/bumblebee.jpg'></image>
+  <view class='content-card'>
+    <view class='movie-name'>Bumblebee</view>
+    <view class='Commentator-card'>
+      <image class='Commentator-head' src='/images/user.png'></image>
+      <view class='Commentator-name'>Shirley 的影评</view>
+    </view>
+    <view class='review-card'>
+      <view class='review-btn'>
+        <image class='btn-img' src='/images/image.png'></image>
+        <text class='btn-text'>收藏影评</text>
+      </view>
+      <view class='review-btn'>
+        <image class='btn-img' src='/images/image.png'></image>
+        <text class='btn-text'>写影评</text>
+      </view>
+    </view>
+  </view>
+</view>

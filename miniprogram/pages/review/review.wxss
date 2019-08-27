@@ -1,0 +1,66 @@
+/* pages/review/review.wxss */
+.movie-image{
+  display: block;
+  margin: 20rpx auto;
+  width: 360rpx;
+}
+
+.content-card{
+  margin: 20rpx 48rpx 20rpx 48rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.06);
+}
+
+.movie-name{
+  font-size: 40rpx;
+  line-height: 64rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Commentator-card{
+  display: flex;
+  margin-top: 12rpx;
+  margin-left: 60rpx;
+}
+
+.Commentator-head {
+  flex-shrink: 0;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.Commentator-name{
+  font-size: 32rpx;
+  opacity: 0.8; 
+  line-height: 60rpx;
+  justify-content: center;
+  margin-left: 12rpx;
+}
+
+.review-card{
+  display: flex;
+  position: fixed;
+  bottom: 40rpx;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.review-btn{
+  display: flex;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(207, 236, 248, 0.6);
+}
+
+.btn-img{ 
+  width: 43rpx;
+  height: 43rpx;
+  margin-left: 24rpx;
+}
+
+.btn-text{
+  font-size: 36rpx;
+  opacity: 0.8;
+  margin-left: 12rpx;
+  margin-right: 60rpx;
+}

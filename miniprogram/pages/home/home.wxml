@@ -1,10 +1,10 @@
 <!--pages/home/home.wxml-->
-<view class='hot-card'>
+<navigator class='hot-card' url="/pages/detail/detail?id={{movieList[0]._id}}">
   <image class='hot-image' src='{{movieList[0].image}}' mode='widthFix'></image>
   <view class='movie-name' >{{movieList[0].name}}</view>
-</view>
+</navigator>
 
-<view class='review-card'>
+<view class='review-card' bindtap='onTapDetail'>
   <image class='review-head'></image>
   <view class='review-item'>
     <view class='review-username'>Someone</view>

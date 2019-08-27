@@ -1,4 +1,6 @@
 // pages/detail/detail.js
+const db = require("../../utils/db")
+const util = require("../../utils/util")
 
 Page({
 
@@ -6,28 +8,37 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: null,
     movie:[]
   },
 
+  onAddReview(){
+    wx.showActionSheet({
+      itemList: ['文字', '音频'],
+      success(res) {
+        const index = res.tapIndex
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
+        wx.navigateTo({
+          url: '/pages/add-review/add-review',
+        })
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+
+  getMovieDetail(id){
     wx.showLoading({
       title: 'Loading...',
     })
-    console.log(options.id)
+    console.log(id)
 
-    wx.cloud.callFunction({
-      name: 'movieDetail',
-      data: {
-        id: options.id
-      }
-    }).then(result => {
+    db.getMovieDetail(id).then(result => {
       wx.hideLoading()
       const data = result.result
 
+      console.log(data)
       if (data) {
         this.setData({
           movie: data
@@ -48,6 +59,13 @@ Page({
   },
 
   /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+    this.getMovieDetail(options)
+  },
+
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
@@ -58,7 +76,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    util.getUserInfo().then(userInfo => {
+      this.setData({
+        userInfo
+      })
+    })
   },
 
   /**

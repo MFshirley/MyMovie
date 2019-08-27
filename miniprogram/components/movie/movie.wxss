@@ -1,0 +1,14 @@
+/* components/movie/movie.wxss */
+.movie-image{
+  display: block;
+  margin: 36rpx auto 0rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.movie-name{
+  font-size: 40rpx;
+  line-height: 72rpx;
+  font-weight: bold;
+  text-align: center;
+}

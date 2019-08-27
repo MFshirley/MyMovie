@@ -1,0 +1,5 @@
+<!--components/movie/movie.wxml-->
+<view class="movie-card">
+  <image class='movie-image' mode='widthFix' src='{{movieImage}}'></image>
+  <view class='movie-name'>{{movieName}}</view>
+</view>

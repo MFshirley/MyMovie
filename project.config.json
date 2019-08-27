@@ -19,7 +19,7 @@
 	},
 	"appid": "wxfee860bd9ece0be9",
 	"projectname": "MyMovies",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.6",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -72,6 +72,13 @@
 					"id": -1,
 					"name": "me",
 					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add-review",
+					"pathName": "pages/add-review/add-review",
 					"scene": null
 				}
 			]

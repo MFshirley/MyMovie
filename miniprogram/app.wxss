@@ -1,4 +1,18 @@
 /**app.wxss**/
+page{
+  background: #F7F9FB;
+}
+
+.bg{
+  position: absolute;
+  left: 36rpx;
+  right: 36rpx;
+  top: 100rpx;
+  bottom: 60rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.06);
+  border-radius: 10rpx;
+}
+
 .container {
   display: flex;
   flex-direction: column;

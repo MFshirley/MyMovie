@@ -10,6 +10,12 @@ Page({
     movieList: []
   },
 
+  onTapDetail(){
+    wx.navigateTo({
+      url: '/pages/review/review',
+    })
+  },
+
   onTapHot() {
     wx.navigateTo({
       url: '/pages/list/list',

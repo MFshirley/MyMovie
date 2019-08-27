@@ -4,7 +4,9 @@
     "pages/hot/hot",
     "pages/list/list",
     "pages/me/me",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/review/review",
+    "pages/add-review/add-review"
   ],
   "window": {
     "backgroundTextStyle": "dark",

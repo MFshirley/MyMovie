@@ -1,0 +1,60 @@
+{
+  "image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie1.jpg",
+  "name": "哆啦A梦：大雄的金银岛",
+  "type": "奇幻/冒险",
+  "detail": "《哆啦A梦：大雄的金银岛》是根据日本漫画家藤子·F·不二雄创作的漫画《哆啦A梦》改编的系列动画电影的第38部作品。影片以加勒比海为舞台，讲述了为了寻找大航海时代海盗们隐藏的梦幻宝藏，哆啦A梦和小伙伴们展开了宏大的冒险"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie2.jpg",
+	"name": "哪吒之魔童降世",
+  "type": "剧情/喜剧/动画/奇幻",
+	"detail": "该片改编自中国神话故事，讲述了哪吒虽“生而为魔”却“逆天而行斗到底”的成长经历的故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie3.jpg",
+	"name": "烈火英雄",
+  "type": "剧情/灾难",
+	"detail": "《烈火英雄》是由北京博纳影业集团有限公司出品灾难剧情片，该片根据鲍尔吉·原野的长篇报告文学作品《最深的水是泪水》改编，故事以“大连7·16油爆火灾”为原型，讲述了沿海油罐区发生火灾，消防队伍上下级团结一致，誓死抵抗，以生命维护国家及人民财产安全的故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie4.jpg",
+	"name": "我不是药神",
+  "type": "剧情",
+	"detail": "影片讲述了神油店老板程勇从一个交不起房租的男性保健品商贩，一跃成为印度仿制药“格列宁”独家代理商的故事。本片改编自慢粒白血病患者陆勇代购抗癌药的真实事迹。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie5.jpg",
+	"name": "大黄蜂",
+  "type": "科幻/动作/冒险",
+	"detail": "该片是《变形金刚》系列电影的外传电影，讲述了饱经摧残的大黄蜂在一座垃圾场找到自己的藏身之地，并遇到了正遭遇人生瓶颈试图找到自己的人生定位的18岁少女查莉·沃特森的故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie6.jpg",
+	"name": "愤怒的小鸟2",
+  "type": "动作/喜剧/冒险",
+	"detail": "该片讲述了小鸟胖红与宿敌雷纳德化敌为友，共同拯救鸟岛和猪岛的故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie7.jpg",
+	"name": "风语咒",
+  "type": "动画/武侠",
+	"detail": "《风语咒》是画江湖系列首部电影，该片讲述了双目失明的少年郎明，在四大凶兽之一——饕餮”重现人间涂炭生灵的时刻，使用秘术“风语咒”将其封印的英雄故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie8.jpg",
+	"name": "狮子王",
+  "type": "动作/冒险/歌舞/剧情",
+	"detail": "该片讲述了小狮子王辛巴在众多热情的朋友的陪伴下，最终成为了草原之王的故事。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie9.jpg",
+	"name": "驯龙高手3：隐秘的世界",
+  "type": "冒险/动画",
+	"detail": "《驯龙高手3》是由梦工厂动画制作、环球影业发行的动画电影，改编自英国女作家克瑞西达·科威尔所著的同名儿童书籍，是2010年《驯龙高手》和2014年《驯龙高手2》的续集。"
+}
+{
+	"image": "cloud://moviecloud-0yjsg.6d6f-moviecloud-0yjsg/movies/movie10.jpg",
+	"name": "使徒行者2：谍影行动",
+  "type": "动作/犯罪",
+	"detail": "《使徒行者2：谍影行动》是《使徒行者》系列电影的第二部，影片讲述一对兄弟幼时失散，30年后因一桩罪案相见，随着对罪案调查的深入，一个多年来隐于幕后的黑警组织渐渐浮出水面的故事。"
+}
