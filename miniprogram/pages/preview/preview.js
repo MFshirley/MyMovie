@@ -1,35 +1,10 @@
-// pages/add-review/add-review.js
-const util = require('../../utils/util')
-
+// pages/preview/preview.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    movie: {},
-    reviewContent: '',
-    userInfo: null
-  },
-  
-  setMovie(options){
-    let movie = {
-      movieId: options.movieId,
-      name: options.name,
-      image: options.image
-    }
-    this.setData({
-      movie,
-    })
-  },
-
-  onInput(event){
-    this.setData({
-      reviewContent: event.detail.value.trim()
-    })
-  },
-
-  addReview(){
 
   },
 
@@ -37,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setMovie(options)
+
   },
 
   /**

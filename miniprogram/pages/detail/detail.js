@@ -9,17 +9,19 @@ Page({
    */
   data: {
     userInfo: null,
-    movie:[]
+    movie:{}
   },
 
-  onAddReview(){
+  onAddReview() {
+    const movie = this.data.movie
+    
     wx.showActionSheet({
       itemList: ['文字', '音频'],
       success(res) {
         const index = res.tapIndex
 
         wx.navigateTo({
-          url: '/pages/add-review/add-review',
+          url: `/pages/add-review/add-review?movieId=${movie._id}&name=${movie.name}&image=${movie.image}`,
         })
       },
       fail(res) {
@@ -32,13 +34,11 @@ Page({
     wx.showLoading({
       title: 'Loading...',
     })
-    console.log(id)
 
     db.getMovieDetail(id).then(result => {
       wx.hideLoading()
       const data = result.result
 
-      console.log(data)
       if (data) {
         this.setData({
           movie: data
@@ -62,7 +62,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getMovieDetail(options)
+    this.getMovieDetail(options.id)
   },
 
   /**

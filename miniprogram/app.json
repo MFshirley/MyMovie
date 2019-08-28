@@ -6,7 +6,8 @@
     "pages/me/me",
     "pages/detail/detail",
     "pages/review/review",
-    "pages/add-review/add-review"
+    "pages/add-review/add-review",
+    "pages/preview/preview"
   ],
   "window": {
     "backgroundTextStyle": "dark",

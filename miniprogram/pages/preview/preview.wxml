@@ -1,0 +1,3 @@
+<!--pages/preview/preview.wxml-->
+<view class="child-bg"></view>
+<movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>

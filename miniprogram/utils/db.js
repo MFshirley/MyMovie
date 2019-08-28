@@ -10,8 +10,8 @@ module.exports = {
   },
 
   getMovieDetail(id){
-    wx.cloud.callFunction({
-      name: 'moviePage',
+    return wx.cloud.callFunction({
+      name: 'movieDetail',
       data: {
         id
       }
