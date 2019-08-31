@@ -1,0 +1,5 @@
+<!--components/user/user.wxml-->
+<view class="user-info">
+  <image class='user-image' src="{{userImage}}"></image>
+  <view class="user-name">{{userName}}</view>
+</view>

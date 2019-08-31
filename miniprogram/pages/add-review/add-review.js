@@ -23,14 +23,24 @@ Page({
     })
   },
 
+  onTapLogin(event) {
+    this.setData({
+      userInfo: event.detail.userInfo
+    })
+  },
+
   onInput(event){
     this.setData({
       reviewContent: event.detail.value.trim()
     })
   },
 
-  addReview(){
+  onPreview(){
+    const data = this.data
 
+    wx.navigateTo({
+      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.name}&image=${data.movie.image}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}`,
+    })
   },
 
   /**
@@ -38,6 +48,7 @@ Page({
    */
   onLoad: function (options) {
     this.setMovie(options)
+    console.log(options)
   },
 
   /**
@@ -51,7 +62,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    util.getUserInfo().then(userInfo => {
+      this.setData({
+        userInfo
+      })
+    }).catch(err => {
+      console.log('Not Authenticated yet')
+    })
   },
 
   /**

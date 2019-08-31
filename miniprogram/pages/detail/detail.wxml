@@ -4,10 +4,10 @@
 <view class='movie-content' maxlength='255'>{{movie.detail}}</view>
 
 <view class='review-card'>
-  <view class='get-review'>
+  <navigator class='get-review' url="/pages/reviewlist/reviewlist?movieId={{movie._id}}">
     <image class='btn-img' src='/images/image.png'></image>
     <text class='btn-text'>查看影评</text>
-  </view>
+  </navigator>
   <view class='add-review' bindtap="onAddReview">
     <image class='btn-img' src='/images/image.png'></image>
     <text class='btn-text'>添加影评</text>

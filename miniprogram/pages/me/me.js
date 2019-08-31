@@ -8,9 +8,21 @@ Page({
    */
   data: {
     userInfo: null,
+    favorList: [{
+      avatar: "https://wx.qlogo.cn/mmopen/vi_32/JUxl1nttCEgPGO1oqTCxYxh1l13k82aqZ5kADMmFfmWzoUqq9X1FkRw62PtNviaqL2HKRkia6ibicEHfomibEBmvlzg/132",
+      username: "mimi",
+      movieId: "CoTvhHk1IbnAVWz8ZIVWcGcHIff3UnSDl6hzupj7QMg3WGyk",
+      content: "gooooooooooooooooooooooooooood"
+    }, {
+        avatar: "https://wx.qlogo.cn/mmopen/vi_32/JUxl1nttCEgPGO1oqTCxYxh1l13k82aqZ5kADMmFfmWzoUqq9X1FkRw62PtNviaqL2HKRkia6ibicEHfomibEBmvlzg/132",
+        username: "mimi",
+        movieId: "CoTvhHk1IbnAVWz8ZIVWcGcHIff3UnSDl6hzupj7QMg3WGyk",
+        content: "nicccccccccccccccccccccce"
+    }]
   },
 
   onTapLogin(event) {
+    console.log(event.detail.userInfo)
     this.setData({
       userInfo: event.detail.userInfo
     })

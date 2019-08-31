@@ -1,9 +1,14 @@
 <!--pages/add-review/add-review.wxml-->
-<view class="child-bg"></view>
-<movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
-
-<view class="review-content">
-  <textarea class="review-input" placeholder-class="review-placeholder" placeholder="输入您的影评内容..." maxlength="255" bindinput="onInput"></textarea>
+<view wx:if="{{!userInfo}}">
+  <login bindonLogin="onTapLogin"></login>
 </view>
+<view wx:else>
+  <view class="child-bg"></view>
+  <movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
 
-<view class="btn-finish {{!reviewContent ? 'disable' : ''}}">完成</view>
+  <view class="review-content">
+    <textarea class="review-input" placeholder-class="review-placeholder" placeholder="输入您的影评内容..." maxlength="255" bindinput="onInput"></textarea>
+  </view>
+
+  <view class="btn-finish {{!reviewContent ? 'disable' : ''}}" bindtap="onPreview">完成</view>
+</view>

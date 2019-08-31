@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "login": "/components/login/login"
+    "login": "/components/login/login",
+    "backhome": "/components/backhome/backhome",
+    "user": "/components/user/user"
   },
   "navigationBarTitleText": "Me"
 }

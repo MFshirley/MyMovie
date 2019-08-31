@@ -1,1 +1,53 @@
 /* pages/preview/preview.wxss */
+.user-info{
+  display: flex;
+  margin-left: 72rpx;
+}
+
+.review-text{
+  line-height: 100rpx;
+  opacity: 0.6;
+}
+
+.review-content{
+  font-size: 36rpx;
+  margin-left: 108rpx;
+  margin-right: 96rpx;
+  margin-top: 48rpx;
+  opacity: 0.8;
+}
+
+.review-card{
+  display: flex;
+  position: fixed;
+  bottom: 40rpx;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+
+.back-review,
+.send-review{
+  display: flex;
+  padding: 16rpx 32rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(207, 236, 248, 0.6);
+  align-items: center;
+}
+
+.back-review{
+  margin-left: 60rpx;
+}
+
+.send-review{
+  margin-left: 60rpx;
+}
+
+.btn-img{ 
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.btn-text{
+  font-size: 36rpx;
+  opacity: 0.8;
+  margin-left: 12rpx;
+}

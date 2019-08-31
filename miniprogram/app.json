@@ -7,7 +7,8 @@
     "pages/detail/detail",
     "pages/review/review",
     "pages/add-review/add-review",
-    "pages/preview/preview"
+    "pages/preview/preview",
+    "pages/reviewlist/reviewlist"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,0 +1,25 @@
+/* components/user/user.wxss */
+.user-info{
+  display: flex;
+}
+
+.user-image{
+  flex-shrink: 0;
+  height: 100rpx;
+  width: 100rpx;
+  background: #F5E069;
+  border-radius: 50%;
+}
+
+.user-name{
+  line-height: 100rpx;
+  width: 240rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  opacity: 0.6;
+}
+

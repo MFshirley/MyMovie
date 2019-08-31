@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "backhome": "/components/backhome/backhome"
+  },
+  "navigationBarTitleText": "影评列表"
+}

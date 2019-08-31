@@ -1,15 +1,12 @@
 <!--pages/home/home.wxml-->
-<navigator class='hot-card' url="/pages/detail/detail?id={{movieList[0]._id}}">
-  <image class='hot-image' src='{{movieList[0].image}}' mode='widthFix'></image>
-  <view class='movie-name' >{{movieList[0].name}}</view>
+<navigator class='hot-card' url="/pages/detail/detail?movieId={{movieDetail._id}}">
+  <image class='hot-image' src='{{movieDetail.image}}' mode='widthFix'></image>
+  <view class='movie-name' >{{movieDetail.name}}</view>
 </navigator>
 
-<view class='review-card' bindtap='onTapDetail'>
-  <image class='review-head'></image>
-  <view class='review-item'>
-    <view class='review-username'>Someone</view>
-    <view class='review-content'>send a review</view>
-  </view>
+<view class="user-info" wx:if="{{ reviewLength === 0 }}" bindtap="onTapDetail">
+  <user user-image="{{reviewUser.avatar}}" user-name="{{reviewUser.username}}"></user>
+  <view class="review-text">给你推荐了一部电影</view>
 </view>
 
 <view class="nav-card">

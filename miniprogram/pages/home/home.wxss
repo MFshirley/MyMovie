@@ -14,28 +14,15 @@
   opacity: 0.6;
 }
 
-.review-card{
+.user-info{
   display: flex;
   margin-top: 10rpx;
+  justify-content: center;
 }
 
-.review-head{
-  flex-shrink: 0;
-  margin-left: 53rpx;
-  height: 100rpx;
-  width: 100rpx;
-  background: #F5E069;
-  border-radius: 50%;
-}
-
-.review-item{
-  display: flex;
-  align-items: center;
-}
-
-.review-username,
-.review-content{
-  margin-left: 10rpx;
+.review-text{
+  line-height: 100rpx;
+  font-size: 32rpx;
   opacity: 0.6;
 }
 

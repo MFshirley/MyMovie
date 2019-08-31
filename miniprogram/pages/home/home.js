@@ -7,12 +7,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movieList: []
+    movieDetail: {},
+    reviewLength: 0,
+    reviewUser:{}
   },
 
-  onTapDetail(){
+  onTapDetail() {
+    let review = this.data.reviewUser
+
     wx.navigateTo({
-      url: '/pages/review/review',
+      url: `/pages/review/review?id=${review._id}&name=${review.username}&image=${review.avatar}&content=${review.content}`,
     })
   },
 
@@ -28,24 +32,52 @@ Page({
     })
   },
 
+  onPullDownRefresh() {
+    this.getMovieList(() => {
+      wx.stopPullDownRefresh()
+    })
+  },
+
   getMovieList(){
     wx.showLoading({
       title: 'Still loading...',
     })
 
     db.getMovieList().then(result => {
-      console.log(result)
+      //console.log(result)
       wx.hideLoading()
 
       const data = result.data
+      let movieLength = data.length
+      const randomIndex = Math.floor(Math.random() * movieLength)
+
       if(data.length){
         this.setData({
-          movieList: data
+          movieDetail: data[randomIndex]
         })
       }
+      const movieId = this.data.movieDetail.movieId
+      this.getReview(movieId)
     }).catch(err => {
       console.error(err)
       wx.hideLoading()
+    })
+  },
+
+  getReview(movieId) {
+    db.getReviews(movieId).then(result => {
+      const data = result.data
+      let reviewLength = data.length
+      const randomIndex = Math.floor(Math.random() * reviewLength)
+      //console.log(data[randomIndex])
+      if (data.length) {
+        this.setData({
+          reviewUser: data[randomIndex]
+        })
+      }
+      console.log(this.data.reviewUser)
+    }).catch(err => {
+      console.error(err)
     })
   },
 
@@ -54,54 +86,6 @@ Page({
    */
   onLoad(options) {
     this.getMovieList()
+    //this.getReview("TJkkFhWsDn7eGq69BHiZ2OlS4fpdu0NLZgRX5dkE1GxymZCm")
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

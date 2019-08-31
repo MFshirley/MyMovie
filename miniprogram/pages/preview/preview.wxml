@@ -1,3 +1,20 @@
 <!--pages/preview/preview.wxml-->
-<view class="child-bg"></view>
+<view class="bg"></view>
 <movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
+
+<view class="user-info">
+  <user user-image="{{userInfo.avatarUrl}}" user-name="{{userInfo.nickName}}"></user>
+  <view class="review-text">的影评</view>
+</view>
+<view class="review-content" maxlength='255'>{{reviewContent}}</view>
+
+<view class='review-card'>
+  <view class='back-review' bindtap="onTapBack">
+    <image class='btn-img' src='/images/image.png'></image>
+    <text class='btn-text'>返回影评</text>
+  </view>
+  <view class='send-review' bindtap="addReview">
+    <image class='btn-img' src='/images/image.png'></image>
+    <text class='btn-text'>发布影评</text>
+  </view>
+</view>

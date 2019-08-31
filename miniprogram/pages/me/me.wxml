@@ -5,17 +5,13 @@
 
 <view class="user-card" wx:else>
   <view class='favor-review'>收藏的影评V</view>
-  <view class='favor-card'>
+  <view class='favor-card' wx:for="{{favorList}}">
     <image class='movie-image' mode='widthFix' src='/images/bumblebee.jpg'></image>
     <view class='text-card'>
     <view class='movie-name'>Bumblebee</view>
-    <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>nice good wonderful I need a long long long long looooooooooooooooong text</view>
+    <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>{{item.content}}</view>
     <view class='review-voice' wx:else></view>
-    <view class='Commentator-card'>
-      <image class='Commentator-head' src='/images/user.png'></image>
-      <view class='Commentator-name'>Shirley</view>
-    </view>
   </view>
-  <view class="back-btn" bindtap='onBackHome'>回到首页</view>
+  <backhome></backhome>
 </view>
 </view>

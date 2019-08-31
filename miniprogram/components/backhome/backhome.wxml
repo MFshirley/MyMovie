@@ -1,0 +1,2 @@
+<!--components/backhome/backhome.wxml-->
+<navigator class="back-btn" url="/pages/home/home">回到首页</navigator> 

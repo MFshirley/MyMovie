@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "movie": "/components/movie/movie"
+    "movie": "/components/movie/movie",
+    "login": "/components/login/login"
   },
   "navigationBarTitleText": "编辑影评"
 }
