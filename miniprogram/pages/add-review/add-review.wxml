@@ -10,10 +10,10 @@
     <textarea class="review-input" placeholder-class="review-placeholder" placeholder="输入您的影评内容..." maxlength="255" bindinput="onInput"></textarea>
   </view>
   
-  <!-- <view class='review-record'>
+  <view class='review-record' bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress">
     <image class='record-img' src='/images/image.png'></image>
     <view class='record-text'>录音</view>
-  </view>-->
+  </view>
 
   <view class="btn-finish {{!reviewContent ? 'disable' : ''}}" bindtap="onPreview">完成</view>
 </view>
