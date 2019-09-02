@@ -9,7 +9,7 @@ Page({
   data: {
     movie: {},
     reviewContent: '',
-    userInfo: null
+    userInfo: null,
   },
   
   setMovie(options){
@@ -41,36 +41,6 @@ Page({
     wx.navigateTo({
       url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.name}&image=${data.movie.image}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}`,
     })
-  },
-
-  onRecord(){
-    const recorderManager = wx.getRecorderManager()
-
-    recorderManager.onStart(() => {
-      console.log('recorder start')
-    })
-    recorderManager.onPause(() => {
-      console.log('recorder pause')
-    })
-    recorderManager.onStop((res) => {
-      console.log('recorder stop', res)
-      const { tempFilePath } = res
-    })
-    recorderManager.onFrameRecorded((res) => {
-      const { frameBuffer } = res
-      console.log('frameBuffer.byteLength', frameBuffer.byteLength)
-    })
-
-    const options = {
-      duration: 10000,
-      sampleRate: 44100,
-      numberOfChannels: 1,
-      encodeBitRate: 192000,
-      format: 'aac',
-      frameSize: 50
-    }
-
-    recorderManager.start(options)
   },
 
   /**

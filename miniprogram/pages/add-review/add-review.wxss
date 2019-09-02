@@ -32,11 +32,15 @@
 
 .review-record{
   display: flex;
-  padding: 24rpx;
   margin-top: 24rpx;
-  justify-content: center;
-  width: 180rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -68rpx;
+  padding: 24rpx;
+  width: 136rpx;
+  background: #FFFFFF;
   box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 10rpx;
 }
 
 .record-img{

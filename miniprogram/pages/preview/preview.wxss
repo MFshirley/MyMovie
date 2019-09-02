@@ -19,10 +19,11 @@
 
 .review-card{
   display: flex;
-  position: fixed;
-  bottom: 40rpx;
-  justify-content: center;
-  margin-bottom: 60rpx;
+  position: absolute;
+  width: 560rpx;
+  left: 50%;
+  margin-left: -280rpx;
+  bottom: 120rpx;
 }
 
 .back-review,
@@ -33,12 +34,8 @@
   align-items: center;
 }
 
-.back-review{
-  margin-left: 60rpx;
-}
-
 .send-review{
-  margin-left: 60rpx;
+  margin-left: 48rpx;
 }
 
 .btn-img{ 
@@ -47,7 +44,7 @@
 }
 
 .btn-text{
+  margin-left: 12rpx;
   font-size: 36rpx;
   opacity: 0.8;
-  margin-left: 12rpx;
 }

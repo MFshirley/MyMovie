@@ -10,8 +10,9 @@
 .review-card{
   display: flex;
   position: absolute;
-  justify-content: center;
   width: 560rpx;
+  left: 50%;
+  margin-left: -280rpx;
   bottom: 120rpx;
 }
 

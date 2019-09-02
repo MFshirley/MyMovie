@@ -8,11 +8,11 @@
 <view class="review-content" maxlength="255">{{reviewList.content}}</view>
 
 <view class='review-card'>
-  <view class='review-btn' bindtap="onAddFavor">
+  <view class='favor-btn' bindtap="onAddFavor">
     <image class='btn-img' src='/images/image.png'></image>
     <text class='btn-text'>收藏影评</text>
   </view>
-  <view class='review-btn' bindtap='onAddReview'>
+  <view class='add-btn' bindtap='onAddReview'>
     <image class='btn-img' src='/images/image.png'></image>
     <text class='btn-text'>写影评</text>
   </view>
