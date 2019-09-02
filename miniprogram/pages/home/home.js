@@ -14,9 +14,10 @@ Page({
 
   onTapDetail() {
     let review = this.data.reviewUser
+    let movie = this.data.movieDetail
 
     wx.navigateTo({
-      url: `/pages/review/review?id=${review._id}&name=${review.username}&image=${review.avatar}&content=${review.content}`,
+      url: `/pages/review/review?id=${review._id}&nickname=${review.username}&avatar=${review.avatar}&content=${review.content}&movieId=${review.movieId}&moviename=${movie.name}&movieimage=${movie.image}`,
     })
   },
 
@@ -56,7 +57,8 @@ Page({
           movieDetail: data[randomIndex]
         })
       }
-      const movieId = this.data.movieDetail.movieId
+      const movieId = this.data.movieDetail._id
+      //console.log(movieId)
       this.getReview(movieId)
     }).catch(err => {
       console.error(err)
@@ -65,9 +67,15 @@ Page({
   },
 
   getReview(movieId) {
+    wx.showLoading({
+      title: 'still loading...',
+    })
+    
     db.getReviews(movieId).then(result => {
+      wx.hideLoading()
       const data = result.data
       let reviewLength = data.length
+      //console.log(reviewLength)
       const randomIndex = Math.floor(Math.random() * reviewLength)
       //console.log(data[randomIndex])
       if (data.length) {
@@ -75,8 +83,9 @@ Page({
           reviewUser: data[randomIndex]
         })
       }
-      console.log(this.data.reviewUser)
+      //console.log(this.data.reviewUser)
     }).catch(err => {
+      wx.hideLoading()
       console.error(err)
     })
   },
@@ -86,6 +95,5 @@ Page({
    */
   onLoad(options) {
     this.getMovieList()
-    //this.getReview("TJkkFhWsDn7eGq69BHiZ2OlS4fpdu0NLZgRX5dkE1GxymZCm")
   },
 })

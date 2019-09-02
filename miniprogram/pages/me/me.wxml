@@ -3,15 +3,21 @@
   <login bindonLogin="onTapLogin"></login>
 </view>
 
-<view class="user-card" wx:else>
-  <view class='favor-review'>收藏的影评V</view>
+<view wx:else>
+<view class='favor-review'>收藏的影评V</view>
+<scroll-view class="favor-block" scroll-y>
   <view class='favor-card' wx:for="{{favorList}}">
-    <image class='movie-image' mode='widthFix' src='/images/bumblebee.jpg'></image>
+    <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
     <view class='text-card'>
-    <view class='movie-name'>Bumblebee</view>
-    <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>{{item.content}}</view>
-    <view class='review-voice' wx:else></view>
+      <view class='movie-name'>{{item.movieName}}</view>
+      <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>{{item.content}}</view>
+      <view class='review-voice' wx:else></view>
+      <view class="user-info">
+        <image class='user-image' src="{{item.avatar}}"></image>
+        <view class="user-name">{{item.nickName}}</view>
+      </view>
+    </view>
   </view>
-  <backhome></backhome>
+</scroll-view>
 </view>
-</view>
+<backhome></backhome>

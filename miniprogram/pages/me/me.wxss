@@ -1,10 +1,19 @@
 /* pages/me/me.wxss */
 .favor-review{
   text-align: center;
-  line-height: 80rpx;
+  line-height: 72rpx;
   font-size: 28rpx;
   opacity: 0.8;
   color: #F9A800;
+}
+
+.favor-block{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 72rpx;
+  bottom: 100rpx;
+  padding-bottom: 30rpx;
 }
 
 .favor-card{
@@ -15,9 +24,9 @@
   border-radius: 10rpx;
 }
 
-.movie-image{  
-  width: 360rpx;
-  height: 360rpx;
+.movie-image{
+  width: 180rpx;
+  height: 180rpx;
 }
 
 .text-card{
@@ -31,28 +40,34 @@
 
 .review-text{
   margin-top: 12rpx;
+  line-height: 60rpx;
   font-size: 24rpx;
   opacity: 0.9; 
 }
 
-.Commentator-card{
+.user-info{
   display: flex;
   margin-top: 12rpx;
 }
 
-.Commentator-head {
+.user-image{
   flex-shrink: 0;
-  height: 60rpx;
-  width: 60rpx;
+  height: 50rpx;
+  width: 50rpx;
+  background: #F5E069;
   border-radius: 50%;
 }
 
-.Commentator-name{
-  font-size: 24rpx;
-  opacity: 0.8; 
-  line-height: 60rpx;
-  justify-content: center;
+.user-name{
+  line-height: 50rpx;
+  width: 240rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-left: 12rpx;
+  font-size: 24rpx;
+  opacity: 0.6;
 }
 
 .back-btn{

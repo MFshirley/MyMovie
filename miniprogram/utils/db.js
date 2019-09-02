@@ -38,5 +38,38 @@ module.exports = {
     return db.collection('review').where({
       movieId,
     }).get()
-  }
+  },
+
+  addToFavor(data) {
+    return util.isAuthenticated()
+      .then(() => {
+        return wx.cloud.callFunction({
+          name: 'addToFavor',
+          data,
+        })
+      })
+      .catch(() => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Please Login First',
+        })
+        return {}
+      })
+  },
+
+  getFavor() {
+    return util.isAuthenticated()
+      .then(() => {
+        return wx.cloud.callFunction({
+          name: 'getFavor',
+        })
+      })
+      .catch(() => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Please Login First',
+        })
+        return {}
+      })
+  },
 }

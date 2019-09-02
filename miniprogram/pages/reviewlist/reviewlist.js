@@ -1,5 +1,6 @@
 // pages/reviewlist/reviewlist.js
 const db = require('../../utils/db')
+
 Page({
 
   /**
@@ -27,6 +28,5 @@ Page({
    */
   onLoad: function (options) {
     this.getReviews(options.movieId)
-    console.log("reviewlist " + options.movieId)
   },
 })

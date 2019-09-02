@@ -30,6 +30,27 @@
   color: rgba(29, 29, 38, 0.4);
 }
 
+.review-record{
+  display: flex;
+  padding: 24rpx;
+  margin-top: 24rpx;
+  justify-content: center;
+  width: 180rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+}
+
+.record-img{
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.record-text{
+  line-height: 43rpx;
+  font-size: 32rpx;
+  margin-left: 12rpx;
+  opacity: 0.8;
+}
+
 .btn-finish{
   background: #00BD00;
   color: #FFFFFF;
