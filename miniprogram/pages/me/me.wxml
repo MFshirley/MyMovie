@@ -3,6 +3,11 @@
   <login bindonLogin="onTapLogin"></login>
 </view>
 
+<view class='favor-empty' wx:elif='{{favorList.length === 0}}'>
+  <image class='empty-image' src='/images/empty.png'></image>
+  <view class='empty-text'>暂无收藏的影评.</view>
+</view>
+
 <view wx:else>
 <view class='favor-review'>收藏的影评V</view>
 <scroll-view class="favor-block" scroll-y>

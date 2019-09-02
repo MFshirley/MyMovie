@@ -1,4 +1,27 @@
 /* pages/me/me.wxss */
+.favor-empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 37rpx 27rpx;
+  height: 431rpx;
+  background: #FFFFFF;
+}
+
+.empty-image {
+  margin-bottom: 29rpx;
+  width: 90rpx;
+  height: 90rpx;
+  opacity: 0.4;
+}
+
+.empty-text{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: rgba(139, 139, 139, 0.8);
+}
+
 .favor-review{
   text-align: center;
   line-height: 72rpx;
@@ -68,16 +91,4 @@
   margin-left: 12rpx;
   font-size: 24rpx;
   opacity: 0.6;
-}
-
-.back-btn{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  height: 100rpx;
-  text-align: center;
-  font-size: 36rpx;
-  line-height: 100rpx; 
 }
