@@ -25,7 +25,6 @@ Page({
         this.setData({
           favorList: data
         })
-        //console.log(favorList)
       }
     }).catch(err => {
       console.error(err)
@@ -44,6 +43,14 @@ Page({
       userInfo: event.detail.userInfo
     })
     this.getFavor()
+  },
+
+  onTapReview:function(event){
+    //console.log(event.currentTarget.dataset)
+    const { id } = event.currentTarget.dataset;
+    wx.navigateTo({
+      url: '/pages/review/review?id=' + id,
+    })
   },
 
   /**

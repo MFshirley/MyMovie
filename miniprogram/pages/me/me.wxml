@@ -11,7 +11,7 @@
 <view wx:else>
 <view class='favor-review'>收藏的影评V</view>
 <scroll-view class="favor-block" scroll-y>
-  <view class='favor-card' wx:for="{{favorList}}">
+  <view class='favor-card' wx:for="{{favorList}}" bindtap="onTapReview" data-id="{{item._id}}">
     <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
     <view class='text-card'>
       <view class='movie-name'>{{item.movieName}}</view>
