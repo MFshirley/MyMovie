@@ -37,7 +37,7 @@ module.exports = {
         const index = res.tapIndex
 
         wx.navigateTo({
-          url: `/pages/add-review/add-review?movieId=${movie._id}&name=${movie.name}&image=${movie.image}`,
+          url: `/pages/add-review/add-review?movieId=${movie._id}&name=${movie.movieName}&image=${movie.movieImage}`,
         })
       },
       fail(res) {

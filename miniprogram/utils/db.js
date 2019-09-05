@@ -40,6 +40,15 @@ module.exports = {
     }).get()
   },
 
+  getReviewDetail(id) {
+    return wx.cloud.callFunction({
+      name: 'reviewDetail',
+      data: {
+        id
+      }
+    })
+  },
+
   addToFavor(data) {
     return util.isAuthenticated()
       .then(() => {
@@ -72,4 +81,48 @@ module.exports = {
         return {}
       })
   },
+
+  getMyReview() {
+    return util.isAuthenticated()
+      .then(() => {
+        return wx.cloud.callFunction({
+          name: 'getMyReview',
+        })
+      })
+      .catch(() => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Please Login First',
+        })
+        return {}
+      })
+  },
+
+  getFavorDetail(favorId) {
+    return wx.cloud.callFunction({
+      name: 'favorDetail',
+      data: {
+        id: favorId
+      }
+    })
+  },
+
+  matchReview(id){
+    return util.isAuthenticated()
+      .then(() => {
+        return wx.cloud.callFunction({
+          name: 'matchReview',
+          data:{
+            id
+          }
+        })
+      })
+      .catch(() => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Please Login First',
+        })
+        return {}
+      })
+  }
 }
