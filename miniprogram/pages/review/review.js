@@ -8,13 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movie: {},
     reviewList: {},
     favor:{}
   },
 
   onAddReview() {
-    const movie = this.data.movie
+    const movie = this.data.reviewList
     util.onAddReview(movie)
   },
 
@@ -27,7 +26,7 @@ Page({
       wx.hideLoading()
 
       const data = result.result
-      //console.log(this.data.reviewList)
+      console.log(this.data.reviewList)
       if (data) {
         wx.showToast({
           title: 'Succeed',
