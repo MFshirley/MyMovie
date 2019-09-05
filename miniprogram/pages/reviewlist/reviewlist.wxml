@@ -1,9 +1,6 @@
 <!--pages/reviewlist/reviewlist.wxml-->
-<view class="review-list" wx:for="{{reviewList}}">
-  <view class="user-info">
-    <image class='user-head' src="{{item.avatar}}"></image>
-    <view class="user-name">{{item.username}}</view>
-  </view>
+<view class="review-list" wx:for="{{reviewList}}" bindtap='onTapReviewList' data-id="{{item._id}}">
+  <user user-image="{{item.avatar}}" user-name="{{item.nickName}}"></user>
   <view class="review-content">{{item.content}}</view>
 </view>
 

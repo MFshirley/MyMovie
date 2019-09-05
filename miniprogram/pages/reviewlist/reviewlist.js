@@ -23,6 +23,13 @@ Page({
     })
   },
 
+  onTapReviewList(event) {
+    const { id } = event.currentTarget.dataset;
+    wx.navigateTo({
+      url: '/pages/review/review?id=' + id,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

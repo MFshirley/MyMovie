@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "backhome": "/components/backhome/backhome"
+    "user": "../../components/user/user"
   },
   "navigationBarTitleText": "影评列表"
 }

@@ -1,26 +1,8 @@
 /* pages/reviewlist/reviewlist.wxss */
 .review-list{
-  padding: 48rpx;
+  padding: 24rpx;
   background: #FFFFFF;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.user-info{
-  display: flex;
-}
-
-.user-head{
-  flex-shrink: 0;
-  height: 100rpx;
-  width: 100rpx;
-  background: #F5E069;
-  border-radius: 50%;
-}
-
-.user-name{
-  line-height: 100rpx;
-  margin-left: 24rpx;
-  opacity: 0.6;
 }
 
 .review-content{
