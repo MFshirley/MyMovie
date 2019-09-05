@@ -107,13 +107,13 @@ module.exports = {
     })
   },
 
-  matchReview(id){
+  matchReview(movieId){
     return util.isAuthenticated()
       .then(() => {
         return wx.cloud.callFunction({
           name: 'matchReview',
           data:{
-            id
+            movieId
           }
         })
       })

@@ -1,5 +1,6 @@
 // pages/add-review/add-review.js
 const util = require('../../utils/util')
+const db = require('../../utils/db.js')
 
 Page({
 
@@ -9,6 +10,7 @@ Page({
   data: {
     movie: {},
     reviewContent: '',
+    myReview: {},
     userInfo: null,
     recorderManager: wx.getRecorderManager()
   },
@@ -79,11 +81,40 @@ Page({
     })
   },
 
+  matchReview(movieId){
+    console.log(movieId)
+    wx.showLoading({
+      title: 'Loading...',
+    })
+
+    db.matchReview(movieId).then(result => {
+      wx.hideLoading()
+
+      const data = result.result
+      const len = data.length
+      
+      if (data.length) {
+        this.setData({
+          myReview: data[len - 1]
+        })
+        
+        const myReview = this.data.myReview
+        wx.redirectTo({
+          url: `/pages/review/review?id=${myReview._id}`,
+        })
+      }
+    }).catch(err => {
+      console.error(err)
+      wx.hideLoading()
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setMovie(options)
+    this.matchReview(options.movieId)
   },
 
   /**
