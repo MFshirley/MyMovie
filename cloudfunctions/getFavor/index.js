@@ -17,7 +17,6 @@ exports.main = async (event, context) => {
     user,
   }).get()
   const favorList = favorRes.data
-  console.log(favorList)
   
   return favorList
 }

@@ -44,46 +44,29 @@ Page({
     })
   },
 
-  getMovieDetail(id) {
+  getReviewDetail(favorId) {
     wx.showLoading({
       title: 'Loading...',
     })
 
-    db.getMovieDetail(id).then(result => {
+    db.getReviewDetail(favorId).then(result => {
       wx.hideLoading()
-      const data = result.result
 
+      const data = result.result
       if (data) {
         this.setData({
-          movie: data
+          reviewList: data
         })
-      } else {
-        setTimeout(() => {
-          wx.navigateBack()
-        }, 2000)
       }
+      
     }).catch(err => {
       console.error(err)
       wx.hideLoading()
 
-      setTimeout(() => {
-        wx.navigateBack()
-      }, 2000)
-    })
-  },
-
-  setReview(options){
-    let reviewList = {
-      avatar: options.avatar,
-      content: options.content,
-      nickName: options.nickname,
-      movieId: options.movieId,
-      movieName: options.moviename,
-      movieImage: options.movieimage
-    }
-    console.log(reviewList)
-    this.setData({
-      reviewList,
+      wx.showToast({
+        icon: 'none',
+        title: 'Failed',
+      })
     })
   },
 
@@ -91,9 +74,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //console.log(options.id)
-    //this.getMovieDetail(options.movieId)
-    this.setReview(options)
+    this.getReviewDetail(options.id)
   },
 
 })

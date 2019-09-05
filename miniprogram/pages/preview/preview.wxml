@@ -1,6 +1,6 @@
 <!--pages/preview/preview.wxml-->
 <view class="bg"></view>
-<movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
+<movie movie-name='{{movie.movieName}}' movie-image='{{movie.movieImage}}'></movie>
 
 <view class="user-info">
   <user user-image="{{userInfo.avatarUrl}}" user-name="{{userInfo.nickName}}"></user>

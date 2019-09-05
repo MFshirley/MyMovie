@@ -15,8 +15,8 @@ Page({
   setInfo(options) {
     let movie = {
       movieId: options.movieId,
-      name: options.name,
-      image: options.image
+      movieName: options.name,
+      movieImage: options.image
     }
     let content = options.content
     let userInfo = {
@@ -35,10 +35,10 @@ Page({
     wx.navigateBack()
   },
 
-  addReview(event){
+  addReview(){
     let content = this.data.reviewContent
     let movieId = this.data.movie.movieId
-    console.log(movieId)
+    
     if (!content) return
 
     wx.showLoading({
@@ -46,22 +46,22 @@ Page({
     })
 
     db.addReview({
-      username: this.data.userInfo.nickName,
+      nickName: this.data.userInfo.nickName,
       avatar: this.data.userInfo.avatarUrl,
       content,
       movieId,
+      movieName: this.data.movie.movieName,
+      movieImage: this.data.movie.movieImage,
     }).then(result => {
       wx.hideLoading()
 
       const data = result.result
-      const options = this.data
 
       if (data) {
         wx.showToast({
           title: 'Succeed'
         })
 
-        console.log("shirley " + movieId)
         setTimeout(() => {
           wx.navigateTo({
             url: `/pages/reviewlist/reviewlist?movieId=${movieId}`,
@@ -84,6 +84,5 @@ Page({
    */
   onLoad: function (options) {
     this.setInfo(options)
-    console.log(options.movieId)
   },
 })

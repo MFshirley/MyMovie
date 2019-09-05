@@ -16,8 +16,8 @@ Page({
   setMovie(options){
     let movie = {
       movieId: options.movieId,
-      name: options.name,
-      image: options.image
+      movieName: options.name,
+      movieImage: options.image
     }
     this.setData({
       movie,
@@ -40,7 +40,7 @@ Page({
     const data = this.data
 
     wx.navigateTo({
-      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.name}&image=${data.movie.image}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}`,
+      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.movieName}&image=${data.movie.movieImage}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}`,
     })
   },
 

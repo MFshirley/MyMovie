@@ -4,7 +4,7 @@
 </view>
 <view wx:else>
   <view class="child-bg"></view>
-  <movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
+  <movie movie-name='{{movie.movieName}}' movie-image='{{movie.movieImage}}'></movie>
 
   <view class="review-content">
     <textarea class="review-input" placeholder-class="review-placeholder" placeholder="输入您的影评内容..." maxlength="255" bindinput="onInput"></textarea>

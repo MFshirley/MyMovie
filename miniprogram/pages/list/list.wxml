@@ -1,8 +1,8 @@
 <!--pages/list/list.wxml-->
 <navigator class='movie-card' wx:for='{{movieList}}' wx:key='{{id}}' url='/pages/detail/detail?id={{item._id}}'>
-  <image class='movie-image' mode='widthFix' src='{{item.image}}'></image>
+  <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
   <view class='content-card'>
-    <view class='movie-name'>{{item.name}}</view>
+    <view class='movie-name'>{{item.movieName}}</view>
     <view class='movie-type'>{{item.type}}</view>
   </view>
 </navigator>

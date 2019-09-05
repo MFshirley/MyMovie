@@ -1,11 +1,11 @@
 <!--pages/home/home.wxml-->
 <navigator class='hot-card' url="/pages/detail/detail?id={{movieDetail._id}}">
-  <image class='hot-image' src='{{movieDetail.image}}' mode='widthFix'></image>
-  <view class='movie-name' >{{movieDetail.name}}</view>
+  <image class='hot-image' src='{{movieDetail.movieImage}}' mode='widthFix'></image>
+  <view class='movie-name' >{{movieDetail.movieName}}</view>
 </navigator>
 
-<view class="user-info" bindtap="onTapDetail">
-  <user user-image="{{reviewUser.avatar}}" user-name="{{reviewUser.username}}"></user>
+<view class="user-info" bindtap="onTapReview">
+  <user user-image="{{reviewUser.avatar}}" user-name="{{reviewUser.nickName}}"></user>
   <view class="review-text">给你推荐了一部电影</view>
 </view>
 

@@ -1,6 +1,6 @@
 <!--pages/detail/detail.wxml-->
 <view class='bg'></view>
-<movie movie-name='{{movie.name}}' movie-image='{{movie.image}}'></movie>
+<movie movie-name='{{movie.movieName}}' movie-image='{{movie.movieImage}}'></movie>
 <view class='movie-content' maxlength='255'>{{movie.detail}}</view>
 
 <view class='review-card'>
