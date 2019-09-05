@@ -1,6 +1,28 @@
 /* pages/me/me.wxss */
+.review-tab{
+  display: inline-flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.type-text{
+  font-size: 36rpx;
+  line-height: 60rpx;
+  flex-flow: column;
+  align-items: center;
+}
+
+.normal{
+  color: #c6c6c6;
+}
+
+.selected{
+  color:#F9A800;
+}
+
 .favor-empty{
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -34,9 +56,10 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 72rpx;
+  top: 48rpx;
   bottom: 100rpx;
-  padding-bottom: 30rpx;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
 }
 
 .favor-card{

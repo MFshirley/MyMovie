@@ -2,14 +2,36 @@
 const util = require('../../utils/util')
 const db = require('../../utils/db')
 
+const reviewMap = {
+  favor: '收藏的影评V',
+  mine: '我的影评V'
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
+
   data: {
+    type: 'favor',
     userInfo: null,
+    reviewMap,
+    reviewTab:['favor', 'mine'],
     favorList: []
+  },
+
+  onTapType(event) {
+    let type = event.currentTarget.dataset.cat
+    this.setData({
+      type: type
+    })
+    //this.getNews()
+    if(type === 'favor'){
+      this.getFavor()
+    }else{
+      this.getMyReview()
+    }
   },
 
   getFavor(){
@@ -21,11 +43,43 @@ Page({
       wx.hideLoading()
 
       const data = result.result
+      
       if(data.length){
         this.setData({
           favorList: data
         })
+      } else {
+        favorList: []
       }
+      
+    }).catch(err => {
+      console.error(err)
+      wx.hideLoading()
+
+      wx.showToast({
+        icon: 'none',
+        title: 'Failed',
+      })
+    })
+  },
+
+  getMyReview(){
+    wx.showLoading({
+      title: 'Loading...',
+    })
+
+    db.getMyReview().then(result => {
+      wx.hideLoading()
+
+      const data = result.result
+      if (data.length) {
+        this.setData({
+          favorList: data
+        })
+      } else {
+        favorList: []
+      }
+      //console.log("myreview", this.data.favorList)
     }).catch(err => {
       console.error(err)
       wx.hideLoading()
@@ -38,7 +92,6 @@ Page({
   },
 
   onTapLogin(event) {
-    console.log(event.detail.userInfo)
     this.setData({
       userInfo: event.detail.userInfo
     })
