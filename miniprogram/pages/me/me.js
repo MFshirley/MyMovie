@@ -8,13 +8,8 @@ const reviewMap = {
 }
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-
   data: {
-    type: 'favor',
+    tab: 'favor',
     userInfo: null,
     reviewMap,
     reviewTab:['favor', 'mine'],
@@ -22,12 +17,12 @@ Page({
   },
 
   onTapType(event) {
-    let type = event.currentTarget.dataset.cat
+    let tab = event.currentTarget.dataset.cat
     this.setData({
-      type: type
+      tab: tab
     })
-    //this.getNews()
-    if(type === 'favor'){
+    
+    if (tab == 'favor'){
       this.getFavor()
     }else{
       this.getMyReview()
@@ -48,6 +43,7 @@ Page({
         this.setData({
           favorList: data
         })
+        console.log(this.data.favorList)
       } else {
         favorList: []
       }
@@ -99,7 +95,7 @@ Page({
   },
 
   onTapReview:function(event){
-    //console.log(event.currentTarget.dataset)
+    console.log(event.currentTarget.dataset)
     const { id } = event.currentTarget.dataset;
     wx.navigateTo({
       url: '/pages/review/review?id=' + id,

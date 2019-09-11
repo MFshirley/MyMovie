@@ -21,7 +21,9 @@ exports.main = async (event, context) => {
       content: event.content,
       movieId: event.movieId,
       movieName: event.movieName,
-      movieImage: event.movieImage
+      movieImage: event.movieImage,
+      recordPath: event.recordPath,
+      type: event.type
     },
   })
 

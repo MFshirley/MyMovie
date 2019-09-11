@@ -8,8 +8,16 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: null,
     reviewList: {},
     favor:{}
+  },
+
+  onPlayRecord(){
+    var filePath = this.data.reviewList.recordPath
+    const innerAudioContext = wx.createInnerAudioContext();
+    innerAudioContext.src = filePath
+    innerAudioContext.play();
   },
 
   onAddReview() {
@@ -26,7 +34,7 @@ Page({
       wx.hideLoading()
 
       const data = result.result
-      console.log(this.data.reviewList)
+      //console.log(this.data.reviewList)
       if (data) {
         wx.showToast({
           title: 'Succeed',
@@ -57,7 +65,7 @@ Page({
           reviewList: data
         })
       }
-      
+      //console.log("review ", this.data.reviewList)
     }).catch(err => {
       console.error(err)
       wx.hideLoading()
@@ -74,6 +82,17 @@ Page({
    */
   onLoad: function (options) {
     this.getReviewDetail(options.id)
+  },
+
+  onShow: function () {
+    util.getUserInfo().then(userInfo => {
+      this.setData({
+        userInfo
+      })
+      console.log("review login", this.data.userInfo)
+    }).catch(err => {
+      console.log('Not Authenticated yet')
+    })
   },
 
 })

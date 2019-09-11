@@ -35,14 +35,21 @@ module.exports = {
       itemList: ['文字', '音频'],
       success(res) {
         const index = res.tapIndex
-
-        wx.navigateTo({
-          url: `/pages/add-review/add-review?movieId=${movie._id}&name=${movie.movieName}&image=${movie.movieImage}`,
-        })
+        
+        if (index === 0) {
+          wx.navigateTo({
+            url: `/pages/add-review/add-review?movieId=${movie.movieId}&name=${movie.movieName}&image=${movie.movieImage}&type=0`,
+          })
+        } else {
+          wx.navigateTo({
+            url: `/pages/add-review/add-review?movieId=${movie.movieId}&name=${movie.movieName}&image=${movie.movieImage}&type=${index}`,
+          })
+        }
       },
       fail(res) {
         console.log(res.errMsg)
       }
     })
   },
+
 }

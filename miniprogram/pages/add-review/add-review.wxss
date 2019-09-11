@@ -35,9 +35,9 @@
   margin-top: 24rpx;
   position: absolute;
   left: 50%;
-  margin-left: -68rpx;
+  margin-left: -100rpx;
   padding: 24rpx;
-  width: 136rpx;
+  width: 200rpx;
   background: #FFFFFF;
   box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
   border-radius: 10rpx;

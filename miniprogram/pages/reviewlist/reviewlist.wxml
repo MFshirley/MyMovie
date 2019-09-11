@@ -1,6 +1,10 @@
 <!--pages/reviewlist/reviewlist.wxml-->
 <view class="review-list" wx:for="{{reviewList}}" bindtap='onTapReviewList' data-id="{{item._id}}">
   <user user-image="{{item.avatar}}" user-name="{{item.nickName}}"></user>
-  <view class="review-content">{{item.content}}</view>
+  <view wx:if="{{item.type == 'text'}}" class="review-content">{{item.content}}</view>
+  <view class="review-record" wx:else>
+    <image class='record-img' src='/images/image.png'></image>
+    <view class='record-text'>15S</view>
+  </view>
 </view>
 

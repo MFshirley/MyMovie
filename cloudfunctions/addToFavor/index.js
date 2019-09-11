@@ -12,7 +12,7 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const user = wxContext.OPENID
-  const movieId = event._id
+  const reviewId = event._id
 
   const favorRes = await db.collection('favor').where({
     movieId,
@@ -24,14 +24,16 @@ exports.main = async (event, context) => {
   if (!favorList.favor) {
     await db.collection('favor').add({
       data: {
-        movieId,
+        movieId: event.movieId,
+        reviewId,
         user,
+        type: event.type,
         content: event.content,
+        recordPath: event.recordPath,
         avatar: event.avatar,
         nickName: event.nickName,
         movieImage: event.movieImage,
         movieName: event.movieName,
-        favor: true,
       },
     })
   } else {

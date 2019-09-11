@@ -9,13 +9,17 @@ Page({
    */
   data: {
     movie: {},
+    type: '0',
     reviewContent: '',
     myReview: {},
     userInfo: null,
+    tempFilePath: null,
     recorderManager: wx.getRecorderManager()
   },
   
   setMovie(options){
+    let type = options.type
+
     let movie = {
       movieId: options.movieId,
       movieName: options.name,
@@ -23,6 +27,7 @@ Page({
     }
     this.setData({
       movie,
+      type
     })
   },
 
@@ -38,11 +43,21 @@ Page({
     })
   },
 
-  onPreview(){
+  onTextPreview(){
     const data = this.data
 
     wx.navigateTo({
-      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.movieName}&image=${data.movie.movieImage}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}`,
+      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.movieName}&image=${data.movie.movieImage}&content=${data.reviewContent}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}&type=${'text'}`,
+    })
+  },
+
+  onRecordPreview() {
+    const data = this.data
+    let path = encodeURIComponent(data.tempFilePath)
+    console.log("record", path)
+
+    wx.navigateTo({
+      url: `/pages/preview/preview?movieId=${data.movie.movieId}&name=${data.movie.movieName}&image=${data.movie.movieImage}&path=${path}&username=${data.userInfo.nickName}&userimage=${data.userInfo.avatarUrl}&type=${'record'}`,
     })
   },
 
@@ -54,7 +69,7 @@ Page({
     console.log("touch end")
     this.data.recorderManager.stop();
     this.data.recorderManager.onStop((res) => {
-      this.tempFilePath = res.tempFilePath;
+      this.data.tempFilePath = res.tempFilePath;
       console.log('停止录音', res.tempFilePath)
       const { tempFilePath } = res
     })

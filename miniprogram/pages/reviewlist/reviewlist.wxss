@@ -12,3 +12,25 @@
   opacity: 0.8;
   max-lines: 1;
 }
+
+.review-record{
+  display: flex;
+  margin-top: 24rpx;
+  padding: 24rpx;
+  width: 180rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 10rpx;
+}
+
+.record-img{
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.record-text{
+  line-height: 43rpx;
+  font-size: 32rpx;
+  margin-left: 12rpx;
+  opacity: 0.8;
+}

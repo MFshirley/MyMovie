@@ -6,7 +6,11 @@
   <user user-image="{{userInfo.avatarUrl}}" user-name="{{userInfo.nickName}}"></user>
   <view class="review-text">的影评</view>
 </view>
-<view class="review-content" maxlength='255'>{{reviewContent}}</view>
+<view wx:if="{{type == 'text'}}" class="review-content" maxlength='255'>{{reviewContent}}</view>
+<view wx:elif="{{type == 'record'}}" class="review-record" bindtap="onPlay">
+  <image class='record-img' src='/images/image.png'></image>
+  <view class='record-text'>点击试听</view>
+</view>
 
 <view class='review-card'>
   <view class='back-review' bindtap="onTapBack">

@@ -6,14 +6,19 @@
   <view class="child-bg"></view>
   <movie movie-name='{{movie.movieName}}' movie-image='{{movie.movieImage}}'></movie>
 
+  <view wx:if="{{type === '0'}}">
   <view class="review-content">
     <textarea class="review-input" placeholder-class="review-placeholder" placeholder="输入您的影评内容..." maxlength="255" bindinput="onInput"></textarea>
+
+  <view class="btn-finish {{!reviewContent ? 'disable' : ''}}" bindtap="onTextPreview">完成</view>
+  </view>
   </view>
   
+  <view  wx:else>
   <view class='review-record' bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress">
     <image class='record-img' src='/images/image.png'></image>
-    <view class='record-text'>录音</view>
+    <view class='record-text'>按住录音</view>
   </view>
-
-  <view class="btn-finish {{!reviewContent ? 'disable' : ''}}" bindtap="onPreview">完成</view>
+  <view class="btn-finish" bindtap="onRecordPreview">去试听</view>
+  </view>
 </view>

@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    reviewList: []
+    reviewList: [],
   },
 
   getReviews(movieId){
@@ -18,6 +18,7 @@ Page({
           reviewList: data
         })
       }
+      console.log("list ", this.data.reviewList)
     }).catch(err => {
       console.error(err)
     })

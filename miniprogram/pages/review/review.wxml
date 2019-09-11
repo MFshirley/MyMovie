@@ -5,7 +5,11 @@
   <user user-image="{{reviewList.avatar}}" user-name="{{reviewList.nickName}}"></user>
   <view class="review-text">的影评</view>
 </view>
-<view class="review-content" maxlength="255">{{reviewList.content}}</view>
+<view wx:if="{{reviewList.type == 'text'}}" class="review-content">{{reviewList.content}}</view>
+<view class="review-record" wx:else bindtap="onPlayRecord">
+  <image class='record-img' src='/images/image.png'></image>
+  <view class='record-text'>15S</view>
+</view>
 
 <view class='review-card'>
   <view class='favor-btn' bindtap="onAddFavor">

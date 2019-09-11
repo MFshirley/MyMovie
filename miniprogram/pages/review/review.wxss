@@ -19,6 +19,29 @@
   opacity: 0.8;
 }
 
+.review-record{
+  display: flex;
+  margin-top: 24rpx;
+  margin-left: 80rpx;
+  padding: 24rpx;
+  width: 180rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 10rpx;
+}
+
+.record-img{
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.record-text{
+  line-height: 43rpx;
+  font-size: 32rpx;
+  margin-left: 12rpx;
+  opacity: 0.8;
+}
+
 .review-card{
   display: flex;
   position: absolute;

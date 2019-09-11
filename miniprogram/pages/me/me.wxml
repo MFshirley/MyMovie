@@ -15,8 +15,11 @@
       <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
       <view class='text-card'>
         <view class='movie-name'>{{item.movieName}}</view>
-        <view class='review-text' wx:if='{{mode === text}}'>{{item.content}}</view>
-        <view class='review-voice' wx:else></view>
+        <view class='review-text' wx:if="{{item.type == 'text'}}">{{item.content}}</view>
+        <view class="review-record" wx:else bindtap='onPlayRecord'>
+          <image class='record-img' src='/images/image.png'></image>
+          <view class='record-text'>15S</view>
+        </view>
         <view class="user-info">
           <image class='user-image' src="{{item.avatar}}"></image>
           <view class="user-name">{{item.nickName}}</view>
@@ -25,36 +28,4 @@
     </view>
   </scroll-view>
 </view> 
-
-<!--  -->
-
-<!-- <view class="list-block">
-  <view class='favor-review'>收藏的影评V</view>
-  <scroll-view class="favor-block" scroll-y>
-    <view class='favor-card' wx:for="{{favorList}}" bindtap="onTapReview" data-id="{{item._id}}">
-      <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
-      <view class='text-card'>
-        <view class='movie-name'>{{item.movieName}}</view>
-        <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>{{item.content}}</view>
-        <view class='review-voice' wx:else></view>
-        <view class="user-info">
-          <image class='user-image' src="{{item.avatar}}"></image>
-          <view class="user-name">{{item.nickName}}</view>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-
-  <view class='my-review'>我的影评V</view>
-  <scroll-view class="favor-block" scroll-y>
-    <view class='favor-card' wx:for="{{myReviewList}}" bindtap="onTapReview" data-id="{{item._id}}">
-      <image class='movie-image' mode='widthFix' src='{{item.movieImage}}'></image>
-      <view class='text-card'>
-        <view class='movie-name'>{{item.movieName}}</view>
-        <view class='review-text' maxlength='2' wx:if='{{mode === text}}'>{{item.content}}</view>
-        <view class='review-voice' wx:else></view>
-      </view>
-    </view>
-  </scroll-view>
-</view>-->
 <backhome></backhome>
